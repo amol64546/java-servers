@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:50:37 +0530] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:50:42 +0530] "GET /api HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:50:57 +0530] "GET /jax-rs-service HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:51:25 +0530] "GET /jax-rs-service/greet HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:52:05 +0530] "GET /api/greet HTTP/1.1" 404 - http-bio-8080-exec-6 0
+127.0.0.1 - - [24/Jul/2025:23:53:11 +0530] "GET /api/greet HTTP/1.1" 404 - http-bio-8080-exec-9 0
+127.0.0.1 - - [24/Jul/2025:23:53:16 +0530] "GET /api/greet HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:54:28 +0530] "GET /api/greet HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [24/Jul/2025:23:54:29 +0530] "GET /api/greet HTTP/1.1" 404 - http-bio-8080-exec-4 0

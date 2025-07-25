@@ -1,0 +1,9 @@
+SimpleRestServer$HelloHandler.class
+SwaggerHttpServer.class
+SwaggerHttpServer$SwaggerJsonHandler.class
+ApiCallWithHttpClient.class
+SimpleRestServer.class
+SwaggerHttpServer$HelloHandler.class
+RestServer$HelloHandler.class
+RestServer.class
+SwaggerHttpServer$SwaggerUIHandler.class
