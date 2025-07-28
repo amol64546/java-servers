@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -61,6 +62,19 @@ public class FileController {
         // Show as plain text
         .contentType(MediaType.TEXT_PLAIN)
         .contentLength(file.length())
+        .body(resource);
+  }
+
+  @GetMapping("/download2")
+  public ResponseEntity<Resource> downloadFile2() {
+    // Simulate file bytes (you can fetch from anywhere)
+    byte[] fileData = "Hello from the source!".getBytes(StandardCharsets.UTF_8);
+    ByteArrayResource resource = new ByteArrayResource(fileData);
+
+    return ResponseEntity.ok()
+        .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=hello.txt")
+        .contentType(MediaType.TEXT_PLAIN)
+        .contentLength(fileData.length)
         .body(resource);
   }
 
