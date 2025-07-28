@@ -1,14 +1,19 @@
 package com.json.springservice;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
 
-  @GetMapping("/greet")
-  public String getGreeting() {
-    return "{\"message\": \"Hello, world!\"}";
+  @GetMapping(value = "/test", produces = {
+      MediaType.APPLICATION_JSON_VALUE,
+      MediaType.APPLICATION_XML_VALUE,
+      MediaType.APPLICATION_YAML_VALUE
+  })
+  public Person getGreeting() {
+    return new Person("John Doe", 30);
   }
 
 }

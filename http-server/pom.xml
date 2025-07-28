@@ -15,11 +15,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>swagger-ui</artifactId>
-      <version>5.26.2</version>
-    </dependency>
+
   </dependencies>
 
   <build>
