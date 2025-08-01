@@ -1,41 +1,57 @@
-import com.sun.net.httpserver.HttpServer;
-import com.sun.net.httpserver.HttpHandler;
+// src/SimpleRestServer.java
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.f4b6a3.uuid.codec.UrnCodec;
+import com.github.f4b6a3.uuid.util.UuidValidator;
 import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.util.Map;
 
 public class SimpleRestServer {
 
+    private static final ObjectMapper mapper = new ObjectMapper();
+
     public static void main(String[] args) throws IOException {
-        // Create an HTTP server that listens on port 8080
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
-        
-        // Create a context for the /hello endpoint
-        server.createContext("/hello", new HelloHandler());
-        
-        // Set a default executor (optional, but recommended for production use)
+        HttpServer server = HttpServer.create(new InetSocketAddress(8081), 0);
+
+        server.createContext("/isUuidUrn", new IsUuidUrnHandler());
+        server.createContext("/isValid", new IsValidHandler());
+
         server.setExecutor(null);
-        
-        // Start the server
         server.start();
-        
-        System.out.println("Server is running on http://localhost:8080");
+
+        System.out.println("Server is running on http://localhost:8081");
     }
 
-    // Handler class for the /hello endpoint
-    static class HelloHandler implements HttpHandler {
+    static class IsUuidUrnHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
-            String response = "Hello, World!";
+            Map<String, Object> body = mapper.readValue(exchange.getRequestBody(), Map.class);
+            boolean result = UrnCodec.isUuidUrn((String) body.get("string"));
+            sendJsonResponse(exchange, Map.of("result", result));
+        }
+    }
 
-            // Set response headers (HTTP 200 OK, Content-Type as text/plain)
-            exchange.sendResponseHeaders(200, response.getBytes().length);
+    static class IsValidHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange exchange) throws IOException {
+            Map<String, Object> body = mapper.readValue(exchange.getRequestBody(), Map.class);
+            boolean result = UuidValidator.isValid((String) body.get("uuid"), (int) body.get("version"));
+            sendJsonResponse(exchange, Map.of("result", result));
+        }
+    }
 
-            // Write the response to the output stream
-            OutputStream os = exchange.getResponseBody();
+    private static void sendJsonResponse(HttpExchange exchange, Map<String, Object> responseBody) throws IOException {
+        String response = mapper.writeValueAsString(responseBody);
+        exchange.getResponseHeaders().set("Content-Type", "application/json");
+        exchange.sendResponseHeaders(200, response.getBytes().length);
+        try (OutputStream os = exchange.getResponseBody()) {
             os.write(response.getBytes());
-            os.close();
         }
     }
 }

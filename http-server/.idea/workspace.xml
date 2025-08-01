@@ -4,38 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e96ffaf2-acbe-4feb-bde5-a33aa5cd30b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ApiCallWithHttpClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RestServer$HelloHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RestServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SimpleRestServer$HelloHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SimpleRestServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwaggerHttpServer$HelloHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwaggerHttpServer$SwaggerJsonHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwaggerHttpServer$SwaggerUIHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwaggerHttpServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/oauth2-redirect.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-initializer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui-es-bundle-core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui-es-bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui-standalone-preset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/swagger-ui/swagger-ui.js" beforeDir="false" />
-    </list>
+    <list default="true" id="e96ffaf2-acbe-4feb-bde5-a33aa5cd30b2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -48,26 +24,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiCallWithHttpClient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RestServer.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SwaggerHttpServer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gaian/Desktop/java-http-server/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiCallWithHttpClient.executor": "Run",
+    "Application.RestServer.executor": "Run",
+    "Application.SwaggerHttpServer.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/gaian/Desktop/codeguru/java-server/http-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -131,6 +108,8 @@
       <updated>1753375269953</updated>
       <workItem from="1753375270909" duration="4504000" />
       <workItem from="1753380117767" duration="134000" />
+      <workItem from="1754023134250" duration="120000" />
+      <workItem from="1754024069205" duration="307000" />
     </task>
     <servers />
   </component>
